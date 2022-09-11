@@ -46,4 +46,4 @@ try:
 except Exception as e:
     print("Database connection failed due to {}".format(e))
 
-app.run(host='0.0.0.0', port='8081')
+app.run(host='0.0.0.0', port='80')

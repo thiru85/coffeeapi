@@ -5,7 +5,7 @@ metadata:
     app: coffeeapi
   name: coffeeapi
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: coffeeapi
@@ -18,3 +18,7 @@ spec:
       containers:
       - image: 081324788528.dkr.ecr.us-east-1.amazonaws.com/coffeeapi:latest
         name: coffeeapi
+        imagePullPolicy: Always
+        ports:
+        - name: http 
+          containerPort: 80
