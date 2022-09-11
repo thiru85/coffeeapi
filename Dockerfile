@@ -4,6 +4,6 @@ RUN mkdir app
 COPY . app/
 WORKDIR app
 RUN pip3 install -r requirements.txt
-EXPOSE 3000:80
+EXPOSE 8081
 ENTRYPOINT ["python3", "app.py"]
 
