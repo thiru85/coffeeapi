@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: coffeeapi
+  name: coffeeapi
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: coffeeapi
+  template:
+    metadata:
+      labels:
+        app: coffeeapi
+    spec:
+      serviceAccountName: eksrdsauthserviceaccount
+      containers:
+      - image: 081324788528.dkr.ecr.us-east-1.amazonaws.com/coffeeapi:latest
+        name: coffeeapi
+        imagePullPolicy: Always
+        ports:
+        - name: http 
+          containerPort: 80
+        resources:
+          limits:
+            cpu: 200m
+          requests:
+            cpu: 100m
