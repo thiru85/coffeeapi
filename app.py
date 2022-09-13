@@ -27,9 +27,9 @@ def coffee_api():
 
 
 warnings.filterwarnings('ignore', category=FutureWarning, module='botocore.client')
-ENDPOINT="pgdb1.coathyy6no9j.us-east-1.rds.amazonaws.com"
+ENDPOINT="<your-db-endpoint>"
 PORT="5432"
-USER="dbiamuser"
+USER="<iamroleoruserwithdbaccesspolicyorpermissions"
 REGION="us-east-1"
 DBNAME="postgres"
 
